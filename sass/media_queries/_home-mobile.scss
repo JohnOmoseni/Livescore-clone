@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+@mixin home-page-layout__mobile {
+  :root {
+      --fs-body: 0.875rem;
+      --fs-small: 0.72rem;
+      --fs-tiny: 0.65rem;
+      .fs-small { font-size: 0.72rem;}
+      .fs-tiny { font-size: 0.68rem;}
+  }
+  * { font-size: var(--fs-body)}
+  .badge, .icon {width: 1.2rem; height: 1.2rem}
+
+  .wrapper {
+      nav .tabs ul li {
+          padding: 0.4em 0.6em;
+      }
+      #content-center .match-row > *:not(#calendar) {
+          padding: 1em 0.8em;
+      }
+      #content-center  .match-calendar {
+        .match-row-content{
+          padding: $pad-200;
+          gap: 1em;
+          .live__dates {
+              gap: 1em;
+              * { font-size: var(--fs-small)}
+              div span:last-of-type {
+                  font-size: var(--fs-tiny);
+              }
+              .dates {
+                gap: 0.4em;
+              }
+              
+              .match-calendar-live {
+                  border-radius: 3px;
+              }
+          }
+          .match-calendar-today {
+              div:last-child {
+                  @include flex-row();
+                  gap: $pad-200;
+              }
+          }
+          .calendar-icon img {
+            width: 1.2em;
+            height: 1.2em;
+          }
+        }
+        #calendar {
+          .calendar-weekdays,
+          .calendar-days {
+              gap: $pad-100;
+          }
+        }
+      }
+  }
+
+}

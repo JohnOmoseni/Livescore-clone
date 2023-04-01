@@ -1,0 +1,195 @@
+@use "../abstracts/index" as *;
+
+/* Header Styling */
+.wrapper #top-menu {
+  background: var(--bg-header);
+  padding-inline: 1em;
+  position: relative;
+  z-index: 2;
+
+  .top-menu_container {
+    width: 100%;
+    padding-block: $pad-200;
+    position: sticky;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+  }
+
+  .home_top-menu-link {
+    gap: 1em;
+    display: flex;
+
+    .livescore {
+      flex-basis: 100%;
+      color: var(--text-white);
+      text-align: center;
+      font-size: $fs-400;
+    }
+  }
+
+  .top-menu-links {
+    @include flex-row($gap: 2em, $justify: space-evenly);
+    width: 100%;
+    background: var(--bg-fixed);
+    padding: $pad-200;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    min-height: 8vh;
+    border-top: 1px solid var(--border-clr);
+    box-shadow: $bs-100;
+
+    a {
+      @include flex-column($align: center);
+      gap: $pad-100;
+
+      p {
+        line-height: 1.6;
+        // margin-top: 0.2em;
+      }
+    }
+
+    a.active>* {
+      color: #ff5602;
+    }
+
+    a:has(.active)>div {
+      background: pink;
+    }
+
+    a {
+      font-size: $fs-200;
+    }
+
+    a.get-the-app {
+      display: none;
+    }
+
+    a:last-of-type {
+      justify-content: end;
+    }
+  }
+
+  .column {
+    @include flex-row($gap: $pad-200);
+
+    p.active {
+      color: var(--text-accent);
+    }
+  }
+}
+
+.wrapper nav .tabs {
+  position: relative;
+  padding: 0 6px;
+
+  &::before,
+  &::after {
+    @include pseudo-shadow;
+    width: 1.6em;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-body) 0%, transparent 100%);
+
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-body) 0%, transparent 100%);
+
+  }
+
+  ul {
+    @include flex-row($justify: start);
+    padding-block: $pad-300;
+
+    overflow: scroll;
+    overscroll-behavior-inline: contain;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    li {
+      padding: 0.5em 0.8em;
+    }
+
+    li a {
+      font-weight: $fw-semi-bold;
+      font-size: $fs-250;
+    }
+
+    li:has(a.active) {
+      background: var(--bg-white);
+      z-index: 10;
+
+      a.active {
+        color: var(--text-dark);
+        text-shadow: $ts-100;
+      }
+    }
+  }
+}
+
+@mixin header__laptop() {
+  .wrapper #top-menu {
+    border-bottom: 1px solid var(--border-clr);
+    width: 100vw;
+    margin-inline-start: 50%;
+    transform: translateX(-50%);
+
+    .top-menu_container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 6em;
+    }
+
+    .livescore {
+      display: block;
+    }
+
+    .top-menu-links {
+      height: auto;
+      background: inherit;
+      position: relative;
+      border: none;
+      box-shadow: none;
+
+      a {
+        @include flex-row();
+        font-size: $fs-250;
+        gap: $pad-200;
+      }
+
+      a.get-the-app {
+        display: flex;
+      }
+    }
+  }
+
+  .wrapper nav .tabs {
+
+    &::before,
+    &::after {
+      background: none;
+    }
+
+    ul {
+      padding-block: $pad-350;
+      gap: 1em;
+
+      li {
+        padding: 0.5em 0.8em;
+      }
+
+      li a {
+        font-size: $fs-300;
+      }
+    }
+  }
+}

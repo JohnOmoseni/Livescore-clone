@@ -1,0 +1,49 @@
+// Font-Families
+$ff-family: 'Poppins', sans-serif;
+$ff-header: $ff-family;
+$ff-subheading: $ff-family;
+$ff-stylish: 'Lobster', cursive;
+$ff-body: $ff-family;
+
+// Font-weight
+$fw-regular-300: 300;
+$fw-regular-400: 400;
+$fw-semi-bold: 600;
+$fw-bold: 800;
+
+// Font-size
+$fs-100: 0.625rem;
+$fs-150: 0.74rem;
+$fs-200: 0.8125rem;
+$fs-250: 0.9125rem;
+$fs-300: 0.95rem;
+$fs-350: 1.18rem;
+$fs-400: 1.56rem;
+$fs-500: 2rem;
+$fs-600: 2.5rem;
+$fs-700: 3rem;
+
+$fs-small: $fs-250;
+$fs-nav-links: $fs-200;
+$fs-button: $fs-350;
+$fs-body: $fs-300; 
+
+$fs-primary-header: $fs-500;
+$fs-secondary-header: $fs-400;
+$fs-sub-heading: $fs-300;
+
+/* Fonts Utility Classes */
+.fs-tiny {
+    font-size: $fs-200;
+    font-size: clamp(0.8rem, 2vw, 0.8rem);
+}
+.fs-small {
+    font-size: $fs-250;
+    font-size: clamp(0.9rem, 2vw, 0.95rem);
+}
+.fw-semi-bold {
+    font-weight: $fw-semi-bold;
+}
+.fw-bold {
+    font-weight: $fw-bold;    
+}

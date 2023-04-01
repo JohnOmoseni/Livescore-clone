@@ -1,0 +1,6 @@
+@use '../media_queries/details-mobile' as *;
+@use '../layouts/details' as *;
+
+@media screen and (max-width: 450px) {
+    @include details__mobile();
+}

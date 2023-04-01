@@ -1,0 +1,158 @@
+@use "../abstracts/" as *;
+
+
+.tabs__info {
+    width: 100%;
+    position: relative;
+    > *{
+        width: 100%;
+        padding: $pad-150 $pad-300;
+        transition: all $transition;
+        opacity: 0;
+        visibility: hidden;
+        animation: Tab-slideup 0.3s ease-in both;
+       
+    }
+    .events_heading span.tab {
+        width: max-content;
+        padding: $pad-150 $pad-300;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1px;
+        border: 1px solid var(--text-body);
+        border-radius: 100vmax;
+        &.active {
+            background: var(--bg-white);
+            color: var(--text-dark);
+            font-weight: $fw-bold;
+        }
+    }
+}
+
+.match__info-tab {
+    .match-info ul {
+        @include flex-column();
+        width: 100%;
+        margin-block: $pad-150;
+        gap: 0;
+        border: 1px solid var(--border-clr);
+        border-radius: $br-light;
+        
+        li {
+            @include flex-row($justify: start);
+            gap: $pad-300;
+            width: 100%;
+            padding: $pad-200 $pad-300;
+            border-bottom: 1px solid var(--border-clr);
+            .details {
+                @include flex-column();
+                gap: 0;
+                span:first-of-type {
+                    line-height: 1.2;
+                }
+            }
+        }
+        li:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .match-info p{
+        text-transform: uppercase;
+    }
+}
+.match__summary-tab {
+    .events_heading {
+        @include flex-row($justify: start);
+        width: 100%;
+        span.tab {
+            padding: $pad-150 $pad-300;
+            cursor: pointer;
+        }
+    }
+    .summary-content {
+        @include flex-column();
+        width: 100%;
+        gap: 0;
+        margin-block: 1em;
+        border: 1px solid var(--border-clr);
+        border-bottom: none;
+        border-radius: $br-light;
+        box-shadow: $bs-100;
+        overflow: hidden;
+        li.row {
+            padding: $pad-350;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr max-content 1fr;
+            gap: $pad-200;
+            align-items: center;
+            justify-items: start;
+            position: relative;
+           
+            &:not(:last-of-type) {border-bottom: 1px solid var(--border-clr); }
+        }
+        .match-timeout {
+            @extend .row;
+            background: var(--bg-dark);
+
+            .time {font-weight: $fw-semi-bold;}
+        }
+        .column {
+            width: 100%;
+            display: grid;
+            grid-template-columns: min-content 1fr min-content;
+            align-items: center;
+            gap: $pad-200;
+            vertical-align: middle;
+
+            .player {
+                @include flex-column();
+                width: max-content;
+                white-space: nowrap;
+                gap: 0.1em;
+                justify-self: end;
+
+                span:first-of-type {
+                    color: var(--text-white); 
+                    text-shadow: $ts-200;
+                    display: inline-block;
+                }
+            }
+            .away-goalscorer { justify-self: flex-start;}
+            
+            .card {
+                width: 16px;
+                height: 18px;
+                opacity: 0.9;
+                // display: flex;
+                border-radius: 3px;
+                
+                &.yellow {background: yellow;}
+                &.red {background: #ff2121; }
+            }
+        }
+        .score {
+            color: var(--text-white); 
+            min-width: 50px;
+            padding-inline: $pad-200;
+            text-align: center;
+        }
+        li.no-events {
+            text-align: center;
+        }
+    }
+}
+
+@keyframes Tab-slideup {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    60% { transform: translateY(-10px);}
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+}

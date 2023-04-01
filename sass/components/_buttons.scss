@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+
+%tab-links {
+    position: relative;
+    width: max-content;
+    background: var(--bg-dark);
+    padding: $pad-150 $pad-200;
+    border: none;
+    border-radius: $br-round--edges;
+    box-shadow: $bs-100;
+}
+
+.wrapper nav .tabs li {
+    @extend %tab-links; 
+}

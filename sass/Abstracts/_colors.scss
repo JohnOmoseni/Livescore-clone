@@ -1,0 +1,48 @@
+$colors: (
+  primary-100: #999,
+  primary-200: #666,
+  primary-300: #333,
+  primary-400: #111,
+
+  secondary-300: #fff,
+  secondary-400: #dedede,
+  secondary-500: #bababa,
+
+  accent-200: #ffb922,
+  accent-300: #ffa600,
+  accent-400: #ff8002,
+
+  text-light-100: #fff,
+  text-light-200: #dedede,
+
+  text-dark-100: #333,
+  text-dark-200: #111,
+);
+
+/* Custom Variables - Colors */
+:root {
+  --bg-body: #151515;
+  --bg-header: #151515;
+  --bg-fixed: #111;
+  --bg-header--text: #ff5602;
+  --bg-nav-links: #ffffffec;
+  --bg-main: ;
+  --bg-button-light: var(--bg-white);
+  --bg-button-dark: var(--bg-dark);
+
+  --text-white: #fefefe;
+  --text-dark: #222;
+  --text--grey: #555;
+  --text-accent: #ff5602;
+
+  --text-body: #ababab;
+
+  --bg-grey: #666;
+  --bg-white: #fefefe;
+  --bg-dark: #252525;
+  --bg-accent: #ff5602;
+  --bg-fixtures: rgba(34, 34, 34, 0.824);
+  --bg-transparent: rgba(black, 0.7);
+
+  --border-clr: #6060604d;
+}

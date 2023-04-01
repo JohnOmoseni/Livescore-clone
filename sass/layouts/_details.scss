@@ -1,0 +1,186 @@
+@use "../abstracts/" as *;
+@use "../components/tabs" as *;
+@use "../components/league-table" as *;
+
+#details_container {
+  overflow: hidden auto;
+  width: 100%;
+
+  >* {
+    padding-inline: $pad-300;
+  }
+
+  .badge,
+  .icon {
+    @include icon-size();
+  }
+
+  .nav__menu {
+    @include flex-row;
+    justify-content: space-between;
+
+    .competition {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      align-items: center;
+      gap: $pad-200;
+      padding-block: $pad-200;
+
+      .country-logo {
+        height: 1.4em;
+      }
+
+      .league-details h3 {
+        color: var(--text-white);
+        width: fit-content;
+      }
+
+      .league-details span {
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+    }
+
+    .match__icons {
+      @include flex-row();
+      gap: 3em;
+    }
+  }
+
+  #content-center {
+    @include flex-column();
+    width: 100%;
+    justify-content: start;
+  }
+
+  // > * {
+  //     width: 100vw;
+  //     margin-inline: 50% 0;
+  //     transform: translateX(-50%);
+  // }
+  .row-content {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: $bs-200;
+    border-bottom: 1px solid var(--border-clr);
+  }
+
+  .match__fixture {
+    align-self: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-content: space-evenly;
+    padding-block: $pad-200;
+    background: var(--bg-dark);
+    position: relative;
+    z-index: 3;
+    border-radius: $br-light $br-light 0 0;
+
+    .badge {
+      width: 4em;
+      height: 4em;
+    }
+
+    >div {
+      @include flex-column($align: center);
+      gap: $pad-150;
+
+      span:last-of-type:not(.fs-tiny) {
+        color: var(--text-white);
+      }
+    }
+
+    .match__time h3 {
+      color: var(--text-white);
+      font-size: $fs-350;
+      line-height: 0.9;
+    }
+  }
+
+  .tabs {
+    width: fit-content;
+    padding: $pad-300 $pad-200;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+
+    >* {
+      font-weight: $fw-bold;
+      margin-right: $pad-300;
+      cursor: pointer;
+
+      &:is(:hover, .active) {
+        color: var(--text-accent);
+      }
+    }
+  }
+
+  .fixture_row+.header {
+    margin-top: $pad-150;
+  }
+
+  .fixture_row {
+    width: 100%;
+
+    div,
+    a {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .content {
+      width: 100%;
+      background: var(--bg-fixtures);
+      padding: $pad-200;
+      display: grid;
+      grid-template-columns: minmax(40px, auto) 1fr max-content max-content;
+      align-items: center;
+      justify-content: center;
+      gap: $pad-200;
+      box-shadow: $bs-100;
+      border-radius: $br-light;
+      text-align: center;
+    }
+
+    .teams {
+      @include flex-column();
+      vertical-align: middle;
+
+      .team {
+        @include flex-row();
+        justify-content: start;
+        gap: $pad-150;
+        text-align: left;
+      }
+
+      .badge {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+
+      .team-name {
+        text-shadow: $ts-100;
+      }
+    }
+
+    .score {
+      @include flex-column($align: center);
+      vertical-align: middle;
+
+      span {
+        text-shadow: $ts-100;
+        color: var(--bg-white);
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+
+    .favorite {
+      @include icon-size();
+    }
+  }
+}

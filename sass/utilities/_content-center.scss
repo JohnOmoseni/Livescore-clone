@@ -1,0 +1,255 @@
+@use "../abstracts/" as *;
+@use "../components/calendar" as *;
+
+#content-center {
+  // visibility: hidden;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  .match-row > *:not(#calendar) {
+    padding: 1em;
+  }
+  .center-column > * {
+    width: 100%;
+  }
+
+  .error-ui {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: $bs-100;
+    transition: all $transition;
+    // animation: fadeIn 0.5s linear forwards;
+    pointer-events: none;
+
+    .content {
+      background: rgb(255, 141, 141);
+      border: 1px solid crimson;
+      padding: $pad-300 $pad-200;
+      * {
+        color: crimson;
+      }
+
+      span {
+        letter-spacing: 1px;
+      }
+      p:first-child {
+        margin-bottom: $pad-300;
+      }
+    }
+  }
+  .match-calendar {
+    position: relative;
+    z-index: 1;
+    .match-row-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: $pad-400;
+      width: 100%;
+      border-bottom: 1px solid var(--border-clr);
+      user-select: none;
+
+      > div {
+        @include flex-row();
+      }
+      .match-calendar-today {
+        > div:nth-child(2) {
+          flex: 1 1 auto;
+        }
+
+        .left-arrow,
+        .right-arrow {
+          color: var(--text--grey);
+          cursor: pointer;
+        }
+        .today span {
+          color: var(--text-accent);
+        }
+
+        .today-date {
+          @include flex-column($align: center);
+          gap: 0;
+
+          span {
+            font-weight: $fw-semi-bold;
+            text-align: center;
+            text-shadow: $ts-100;
+            text-transform: uppercase;
+          }
+        }
+
+        div:last-child {
+          @include flex-row();
+          gap: 2em;
+        }
+      }
+      .live__dates {
+        // display: none;
+        gap: $pad-400;
+
+        .match-calendar-live {
+          @include button-reset();
+
+          background: var(--bg-white);
+          width: max-content;
+          padding: $pad-100 $pad-150;
+          border-radius: $br-light;
+          text-align: center;
+
+          div {
+            text-transform: uppercase;
+            color: var(--text-dark);
+            text-shadow: $ts-100;
+            span {
+              color: #000;
+            }
+          }
+        }
+        .dates {
+          flex-basis: 100%;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          place-items: center;
+          gap: $pad-200;
+
+          > div {
+            @include flex-column($align: center);
+            cursor: pointer;
+            gap: 0;
+            white-space: nowrap;
+
+            span:first-child {
+              text-transform: uppercase;
+              line-height: 1.1;
+            }
+            span:last-child {
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+
+            &.today span {
+              color: var(--text-accent);
+            }
+          }
+        }
+      }
+
+      .calendar-icon {
+        user-select: none;
+        position: relative;
+        justify-self: end;
+        cursor: pointer;
+        @include flex-row();
+        cursor: pointer;
+        gap: 0.5em;
+        img {
+          @include icon-size();
+        }
+        div {
+          color: var(--bg-white);
+        }
+      }
+      div {
+        color: var(--text-accent);
+      }
+    }
+  }
+  .competitions {
+    position: relative;
+    @include flex-column();
+    gap: 1em;
+    width: 100%;
+
+    .header {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 2fr auto;
+      align-items: center;
+      gap: 0.8em;
+
+      .country_logo {
+        width: 1.6em;
+        height: 1.2em;
+        border-radius: 3px;
+      }
+      .league_details h3 {
+        color: var(--text-white);
+        letter-spacing: 1px;
+      }
+      .league_details .country_name {
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+    }
+    .fixture_row + .header {
+      margin-top: $pad-150;
+    }
+    .fixture_row {
+      width: 100%;
+      div,
+      a {
+        width: 100%;
+        cursor: pointer;
+      }
+      .content {
+        width: 100%;
+        background: var(--bg-fixtures);
+        padding: $pad-200;
+        display: grid;
+        grid-template-columns: minmax(40px, auto) 1fr max-content max-content;
+        align-items: center;
+        justify-content: center;
+        gap: $pad-200;
+        box-shadow: $bs-100;
+        border-radius: $br-light;
+        text-align: center;
+      }
+      .teams {
+        @include flex-column();
+        vertical-align: middle;
+        .team {
+          @include flex-row();
+          justify-content: start;
+          gap: $pad-150;
+          text-align: left;
+        }
+        .badge {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+        .team-name {
+          text-shadow: $ts-100;
+        }
+      }
+      .score {
+        @include flex-column($align: center);
+        vertical-align: middle;
+        span {
+          text-shadow: $ts-100;
+          color: var(--bg-white);
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+      .favorite {
+        @include icon-size();
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

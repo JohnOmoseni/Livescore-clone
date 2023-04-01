@@ -1,0 +1,20 @@
+@use "../layouts/header" as *;
+@use "../layouts/main" as *;
+@use "../layouts/aside" as *;
+@use "../utilities" as *;
+@use "../layouts/footer" as *;
+@use "../media_queries/home-mobile" as *;
+
+
+@media screen and (max-width: 450px) {
+    @include home-page-layout__mobile;
+}
+@media screen and (min-width: 850px) {
+    @include sidebar_tablet;
+    @include layout-column__tablet;
+}
+@media screen and (min-width: 1000px) {
+    @include header__laptop;
+    @include layout-column__laptop;
+    @include footer__laptop;
+}

@@ -1,0 +1,80 @@
+@use "../abstracts/" as *;
+
+.table__tab {
+    @include flex-column();
+    justify-content: start;
+    gap: 0;
+    .tabs {
+        @include flex-row($justify: start);
+        width: 100%;
+        padding-bottom: 1em;
+        position: relative;
+    }
+    .table__content {
+        border-radius: $br-light;
+        border: 1px solid var(--border-clr);
+        width: 100%;
+
+        .heading .even-row {
+            border-bottom: 1px solid var(--border-clr);
+            .team {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .team-details span{color: var(--text-white);}
+        }
+
+        .even-row {
+            display: grid;
+            grid-template-columns: minmax(45%, 1fr) auto;
+            gap: $pad-200;
+            align-items: center;
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--border-clr);
+            }
+            .team-position,
+            .team-position .team  {
+                @include flex-row($justify: start)
+            }
+            .team-position {
+                .pos { 
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        width: 60%;
+                        margin: 0 auto;
+                        height: 100%;
+                        border-radius: 6px;
+                        border: 6px solid transparent;
+                        border-bottom-color: blue;
+                    }
+                }
+                .team-name {
+                    width: fit-content;
+                    color: var(--text-white);
+                    letter-spacing: 1px;
+                }
+
+            }
+           .team-details {
+                justify-items: end;
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(6, minmax(20px, auto));
+                align-items: center;
+            }
+            span:not(.team) {
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                display: grid;
+                place-items: center;
+            }
+            .team-name, .team-details span {
+                text-shadow: $ts-100;
+            }
+        }
+    }
+}

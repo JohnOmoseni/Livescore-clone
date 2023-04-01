@@ -1,0 +1,76 @@
+@use "../abstracts/" as *;
+@use "../components/loaders" as *;
+
+main {
+    --main-height: 83vh;
+    position: relative;
+    min-height: var(--main-height);
+
+    &:has(> div.loading) {
+        display: grid;
+        place-items: center;
+    }
+
+    &:has(> div.layout:last-child) div.layout:last-child {
+        display: grid;
+        place-items: center;
+        min-height: var(--main-height);
+    }
+
+    .layout-column-container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        >* {
+            border: 1px solid var(--border-clr);
+            border-radius: $br-light;
+        }
+
+    }
+}
+
+@mixin layout-column__tablet() {
+    main {
+        .layout-column-container {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            gap: $pad-300;
+
+            #content-left .left-column {
+                display: block;
+            }
+
+        }
+    }
+}
+
+@mixin layout-column__laptop() {
+    main {
+        --main-height: 70vh;
+
+        .layout-column-container {
+            display: grid;
+            grid-template-columns: max-content 2fr 1fr;
+
+            #content-center {
+                .match-calendar-today {
+                    grid-template-columns: auto 1fr 1fr;
+                    gap: 2em;
+
+                    .dates {
+                        gap: 1.5em;
+                    }
+                }
+            }
+
+            #content-right {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+@use "../abstracts/" as *;
+
+.center-column {
+  @include flex-column();
+  gap: 0.2em;
+  
+  .top {
+    @include flex-column();
+    width: 100%;
+    border-bottom: 1px solid  var(--border-clr);
+
+    > * {padding: $pad-300;}
+  }
+  .league-content {
+    width: 100%;
+    padding-inline: $pad-200;
+
+    .header {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: $pad-100;
+      .right-arrow {
+        justify-self: end;
+      }
+    }
+
+  }
+
+  .header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 2fr auto;
+    align-items: center;
+    gap: 0.8em;
+  
+      .country_logo {
+          width: 1.6em;
+          height: 1.2em;
+          border-radius: 3px;
+      }
+      .league_details h3 {
+          color: var(--text-white);
+          letter-spacing: 1px;
+      }
+      .league_details .country_name {
+          letter-spacing: 1px;
+          white-space: nowrap;
+      }
+  }
+  .tabs {
+    width: fit-content;
+    padding: $pad-300 $pad-200;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+
+    > * {
+        font-weight: $fw-bold; 
+        margin-right: $pad-300;
+        cursor: pointer;
+        &:is(:hover, .active) { color: var(--text-accent)}
+    }
+  }
+  
+  .fixture_row {
+      width: 100%;
+      div, a {width: 100%; cursor: pointer; }
+      .content {
+          width: 100%;
+          background: var(--bg-fixtures);
+          padding: $pad-200;
+          display: grid;
+          grid-template-columns: minmax(40px, auto) 1fr  max-content max-content;
+          align-items: center;
+          justify-content: center;
+          gap: $pad-200;
+          box-shadow: $bs-100;
+          border-radius: $br-light;
+          text-align: center;
+      }
+      .teams {
+          @include flex-column();
+          vertical-align: middle;
+          .team {
+              @include flex-row();
+              justify-content: start;
+              gap: $pad-150;
+              text-align: left;
+          }
+          .badge {width: 1.3rem; height: 1.3rem}
+          .team-name {
+              text-shadow: $ts-100;
+          }
+      }
+      .score {
+          @include flex-column($align: center);
+          vertical-align: middle;
+          span {text-shadow: $ts-100; 
+              color: var(--bg-white);
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              text-align: center;
+          }
+      }
+      .favorite {
+          @include icon-size();
+      }
+  } 
+}

@@ -1,0 +1,61 @@
+@use "../abstracts/" as *;
+
+#calendar {
+    width: max-content;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    top: 0;
+    opacity: 0;
+    transition: $transition;
+    pointer-events: none;
+
+    .calendar-content { 
+        width: 100%;
+        > * {
+            padding: 0.6em 0.8em;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            place-items: center;
+            gap: $pad-300;
+            > * {
+                width: 30px;
+                height: 30px;
+                display: grid;
+                place-items: center;
+                &:has(.current-date) {
+                    border-radius: $br-circle;
+                    background: var(--bg-accent);
+                }
+            }
+        }
+        .current-date {
+            color: var(--text-dark);
+            box-shadow: 0px 2px 10px rgba(black, 0.5);
+            padding: 0.2em;
+            line-height: 1.2;
+        }
+    }
+    .calendar-weekdays{
+        background: var(--bg-header);
+        text-shadow: $ts-100;
+        box-shadow: inset 4px 4px 10px rgba(black, 0.5);
+    }
+    .calendar-days {
+        margin-top: -0.3em;
+        background: var(--bg-dark);
+        gap: 0 1em;
+        border-radius: 0 0 $br-light $br-light;
+        box-shadow: $bs-calendar;
+        cursor: pointer;
+        div {
+            color: var(--text-white);
+            font-weight: $fw-semi-bold;
+        }
+    }
+    &.show {
+        top: 100%;
+        opacity: 1;
+        pointer-events: visible;
+    }
+}

@@ -1,0 +1,292 @@
+[
+    {
+        "country_id": "44",
+        "country_name": "England",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/44_england.png"
+    },
+    {
+        "country_id": "6",
+        "country_name": "Spain",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/6_spain.png"
+    },
+    {
+        "country_id": "3",
+        "country_name": "France",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/3_france.png"
+    },
+    {
+        "country_id": "4",
+        "country_name": "Germany",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/4_germany.png"
+    },
+    {
+        "country_id": "5",
+        "country_name": "Italy",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/5_italy.png"
+    },
+    {
+        "country_id": "82",
+        "country_name": "Netherlands",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/82_netherlands.png"
+    },
+    {
+        "country_id": "27",
+        "country_name": "Brazil",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/27_brazil.png"
+    },
+    {
+        "country_id": "92",
+        "country_name": "Portugal",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/92_portugal.png"
+    },
+    {
+        "country_id": "14",
+        "country_name": "Argentina",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/14_argentina.png"
+    },
+    {
+        "country_id": "17",
+        "country_name": "Australia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/17_australia.png"
+    },
+    {
+        "country_id": "18",
+        "country_name": "Austria",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/18_austria.png"
+    },
+    {
+        "country_id": "31",
+        "country_name": "Chile",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/31_chile.png"
+    },
+    {
+        "country_id": "32",
+        "country_name": "China",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/32_china.png"
+    },
+    {
+        "country_id": "34",
+        "country_name": "Colombia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/34_colombia.png"
+    },
+    {
+        "country_id": "40",
+        "country_name": "Denmark",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/40_denmark.png"
+    },
+    {
+        "country_id": "58",
+        "country_name": "India",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/58_india.png"
+    },
+    {
+        "country_id": "68",
+        "country_name": "Korea Republic",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/68_korea-republic.png"
+    },
+    {
+        "country_id": "78",
+        "country_name": "Mexico",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/78_mexico.png"
+    },
+    {
+        "country_id": "87",
+        "country_name": "Norway",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/87_norway.png"
+    },
+    {
+        "country_id": "90",
+        "country_name": "Peru",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/90_peru.png"
+    },
+    {
+        "country_id": "95",
+        "country_name": "Russia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/95_russia.png"
+    },
+    {
+        "country_id": "97",
+        "country_name": "Saudi Arabia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/97_saudi-arabia.png"
+    },
+    {
+        "country_id": "7",
+        "country_name": "Sweden",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/7_sweden.png"
+    },
+    {
+        "country_id": "106",
+        "country_name": "Switzerland",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/106_switzerland.png"
+    },
+    {
+        "country_id": "111",
+        "country_name": "Turkey",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/111_turkey.png"
+    },
+    {
+        "country_id": "114",
+        "country_name": "USA",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/114_usa.png"
+    },
+    {
+        "country_id": "10",
+        "country_name": "Albania",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/10_albania.png"
+    },
+    {
+        "country_id": "11",
+        "country_name": "Algeria",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/11_algeria.png"
+    },
+    {
+        "country_id": "12",
+        "country_name": "Andorra",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/12_andorra.png"
+    },
+    {
+        "country_id": "13",
+        "country_name": "Angola",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/13_angola.png"
+    },
+    {
+        "country_id": "15",
+        "country_name": "Armenia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/15_armenia.png"
+    },
+    {
+        "country_id": "16",
+        "country_name": "Aruba",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/16_aruba.png"
+    },
+    {
+        "country_id": "19",
+        "country_name": "Azerbaijan",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/19_azerbaijan.png"
+    },
+    {
+        "country_id": "20",
+        "country_name": "Bahrain",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/20_bahrain.png"
+    },
+    {
+        "country_id": "21",
+        "country_name": "Bangladesh",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/21_bangladesh.png"
+    },
+    {
+        "country_id": "125",
+        "country_name": "Barbados",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/125_barbados.png"
+    },
+    {
+        "country_id": "22",
+        "country_name": "Belarus",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/22_belarus.png"
+    },
+    {
+        "country_id": "23",
+        "country_name": "Belgium",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/23_belgium.png"
+    },
+    {
+        "country_id": "134",
+        "country_name": "Belize",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/134_belize.png"
+    },
+    {
+        "country_id": "145",
+        "country_name": "Benin",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/145_benin.png"
+    },
+    {
+        "country_id": "24",
+        "country_name": "Bermuda",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/24_bermuda.png"
+    },
+    {
+        "country_id": "135",
+        "country_name": "Bhutan",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/135_bhutan.png"
+    },
+    {
+        "country_id": "25",
+        "country_name": "Bolivia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/25_bolivia.png"
+    },
+    {
+        "country_id": "26",
+        "country_name": "Bosnia and Herzegovina",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/26_bosnia-and-herzegovina.png"
+    },
+    {
+        "country_id": "136",
+        "country_name": "Botswana",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/136_botswana.png"
+    },
+    {
+        "country_id": "28",
+        "country_name": "Bulgaria",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/28_bulgaria.png"
+    },
+    {
+        "country_id": "150",
+        "country_name": "Burkina Faso",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/150_burkina-faso.png"
+    },
+    {
+        "country_id": "143",
+        "country_name": "Burundi",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/143_burundi.png"
+    },
+    {
+        "country_id": "137",
+        "country_name": "Cambodia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/137_cambodia.png"
+    },
+    {
+        "country_id": "29",
+        "country_name": "Cameroon",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/29_cameroon.png"
+    },
+    {
+        "country_id": "30",
+        "country_name": "Canada",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/30_canada.png"
+    },
+    {
+        "country_id": "33",
+        "country_name": "Chinese Taipei",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/33_chinese-taipei.png"
+    },
+    {
+        "country_id": "156",
+        "country_name": "Congo",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/156_congo.png"
+    },
+    {
+        "country_id": "127",
+        "country_name": "Congo DR",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/127_congo-dr.png"
+    },
+    {
+        "country_id": "35",
+        "country_name": "Costa Rica",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/35_costa-rica.png"
+    },
+    {
+        "country_id": "37",
+        "country_name": "Croatia",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/37_croatia.png"
+    },
+    {
+        "country_id": "132",
+        "country_name": "Curacao",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/132_curacao.png"
+    },
+    {
+        "country_id": "38",
+        "country_name": "Cyprus",
+        "country_logo": "https://apiv3.apifootball.com/badges/logo_country/38_cyprus.png"
+    }
+]

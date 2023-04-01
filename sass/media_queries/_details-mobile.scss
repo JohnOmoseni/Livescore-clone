@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+@mixin details__mobile {
+  .wrapper {
+
+    #details_container{
+    padding-bottom: 10em;
+
+      .nav__menu .match__icons {
+      gap: 0.8em;
+      }
+      .main-row {
+      .match__fixture {
+      .badge { width: 3em; height: 3em;}
+      }
+      .tabs__container .tabs {
+      width: max-content;
+      > * { margin-right: $pad-200;}
+      }
+      }
+      .tabs__info {
+      span.tab { padding: $pad-100 $pad-300}
+      }
+      .match__summary-tab .summary-content {
+      li.row {
+      grid-template-columns: minmax(40%, 1fr) 50px minmax(30%, max-content);
+      }
+      .column {
+      .player span { 
+      width: min-content;
+      white-space: break-spaces;
+      }   
+      }
+      }
+      .table__tab .table__content {
+      .even-row {
+        grid-template-columns: 45% auto;
+        padding: $pad-150;
+
+        * {font-size: var(--fs-small);}
+        .team-position .pos { 
+        &:before {
+          border: 8px solid transparent;
+          border-bottom-color: blue;
+        }
+        }
+        .team-name {
+          font-weight: 500;
+        }
+        span:not(.team) {
+          width: 20px;
+          height: 30px;
+        }
+      }
+      }
+        
+    }
+  }
+}

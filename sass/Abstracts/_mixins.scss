@@ -1,0 +1,69 @@
+@use "./colors.scss" as *;
+@use "./variables.scss" as *;
+@use "./type.scss" as *;
+
+@mixin bg-image($image, $pos: center) {
+    background-image: linear-gradient(to top, rgb(0,0,0,0.3) 20%, transparent),
+                        $image;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: $pos;
+}
+@mixin flex-row($direction: row, $gap: $pad-200, 
+$justify: center, $wrap: nowrap,) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    align-items: center;
+    justify-content: $justify;
+    gap: $gap;
+}
+@mixin flex-column($direction: column, 
+$align: start) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: center;
+    gap: $pad-200;
+}
+@mixin form-input-reset() {
+    font-size: $pad-350;
+    border-radius: 100vmax;
+    border: none;
+    outline: none;
+    background: none;
+}
+@mixin icon-size() {
+    width: $fs-400;
+    height: $fs-400;
+}
+@mixin button-reset() {
+    border: none;
+    outline: none;
+    background: none;
+
+    &:hover, &:focus {
+        border: none;
+        outline: none;
+    }
+}
+@mixin pseudo-shadow {
+    content: '';
+    position: absolute;
+    width: 3em;
+    height: 100%;
+    top: 0;
+    z-index: 9;
+}
+@mixin search-form() {
+        @include form-input-reset();
+        width: 100%;
+        background: transparent;
+        border: 2px solid #666;
+
+        &::placeholder {
+            color: #666;
+            font-style: italic;
+            font-weight: $fw-semi-bold;
+        }
+}
